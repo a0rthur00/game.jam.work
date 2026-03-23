@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida Sustentável - Jogo de Tabuleiro IA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Header / Stats -->
+        <header>
+            <div class="logo">
+                <h1>Corrida <span>Sustentável</span></h1>
+                <p class="subtitle">Projeto IA - Segundo Ano Médio</p>
+            </div>
+            <div id="player-stats" class="stats-grid">
+                <!-- Players stats will be injected here -->
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <main>
+            <div id="board-container">
+                <div id="board" class="board-layout">
+                    <!-- 28 Houses will be generated here: 1 Start + 26 Houses + 1 End -->
+                </div>
+            </div>
+
+            <div id="controls-panel">
+                <div class="die-section">
+                    <div id="dice" class="dice">?</div>
+                    <button id="roll-btn" class="primary-btn">Lançar Dado</button>
+                    <button id="auto-btn" class="secondary-btn">Modo Auto (IA)</button>
+                </div>
+                
+                <div id="event-log" class="log-container">
+                    <div class="log-header">Log de Atividades</div>
+                    <div id="log-content" class="log-content">
+                        <p>Bem-vindo à Corrida Sustentável!</p>
+                        <p>Aguardando início do jogo...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modals for Events -->
+        <div id="modal-overlay" class="hidden">
+            <div id="event-modal" class="modal">
+                <h2 id="modal-title">Evento!</h2>
+                <div id="modal-body">
+                    <p id="modal-text"></p>
+                    <div id="modal-options" class="options-grid"></div>
+                </div>
+                <button id="modal-close" class="hidden">Continuar</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Corrida Sustentável - Protótipo Educacional de IA</p>
+        </footer>
+    </div>
+
+    <!-- Templates for Houses -->
+    <template id="house-template">
+        <div class="house">
+            <span class="house-number"></span>
+            <div class="house-icon"></div>
+            <div class="players-on-house"></div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
